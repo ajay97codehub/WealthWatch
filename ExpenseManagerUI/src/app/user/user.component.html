@@ -1,0 +1,65 @@
+<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#expenseModal" data-bs-backdrop="static" data-bs-keyboard="false"
+(click)="addData()">
+    Add New Transaction
+  </button>
+<div class="row justify-content-center mt-50" class="col-auto">
+<table class="table table-responsive">
+    <thead>
+      <tr>
+        <td scope="col">S.N.</td>
+        <td scope="col">CashFlow</td>
+        <td scope="col">Purpose</td>
+        <td scope="col">Amount</td>
+        <td scope="col">Date</td>
+        <td scope="col">Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr [ngClass]="item.category == 'expense' ? 'table-danger' : 'table-success'" *ngFor="let item of userBalance; let i = index;">
+        <td scope="row">{{i+1}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.purpose}}</td>
+        <td>{{item.amount}}</td>
+        <td>{{currentDate | date:'yyyy-MM-dd'}}</td>
+        <td>
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#expenseModal" (click)="onEdit()">Edit</button>
+            <button type="button" class="btn btn-outline-danger">Del</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="expenseModal" tabindex="-1" aria-labelledby="expenseModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="expenseModalLabel">Expense Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <select class="form-select" aria-label="Default select example">
+                  <option value="1">Expense</option>
+                  <option value="2">Income</option>
+                </select>
+                <div class="mb-3">
+                  <label for="expensePurpose" class="form-label">Purpose</label>
+                  <input type="text" class="form-control" id="expensePurpose" aria-describedby="expenseHelp">
+                  <div id="purposeHelp" class="form-text">Add Expense Purpose.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="expenseAmount" class="form-label">Amount</label>
+                    <input type="text" class="form-control" id="expenseAmount">
+                  </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button *ngIf="isNewTransaction" type="button" class="btn btn-primary" (click)="saveData()">Save</button>
+        <button *ngIf="!isNewTransaction" type="button" class="btn btn-primary" (click)="updateData()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>

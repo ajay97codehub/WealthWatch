@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ExpenseManager</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li *ngIf="IsAdmin" class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/admin">Admin DashBoard</a>
+        </li>
+        <li *ngIf="!IsAdmin" class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/user">User DashBoard</a>
+        </li>
+      </ul>
+      <h3 *ngIf="this.authService.IsUserLoggedIn()" class="me-auto mb-2 mb-lg-0">Hello, {{this.authService.getUserName()|titlecase}}</h3>
+      <button *ngIf="!this.authService.IsUserLoggedIn()" type="button" class="btn btn-success mb-2 mb-lg-0" routerLink="/login">Login</button>
+      <button *ngIf="this.authService.IsUserLoggedIn()" type="button" class="btn btn-danger mb-2 mb-lg-0" (click)="logoutUser()">Logout</button>
+    </div>
+    </div>
+  </nav>
