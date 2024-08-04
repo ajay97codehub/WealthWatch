@@ -1,16 +1,21 @@
-# Wealthwatch
-This app will track all the transactions done by users.
-## User Can Register if they are not already registered
-![image](https://github.com/user-attachments/assets/2cb775b1-5005-4cf5-85c4-eb28971c0b6d)
-## If user is registered they can login using username and password user will be authenticated and authorise using JWT
-![image](https://github.com/user-attachments/assets/fa710bde-2b92-45c4-8362-57e9c6097cbb)
-## If user is authenticated they will directed to user dashboard otherwise they will be throw unauthorised access
-S1107180![image](https://github.com/user-attachments/assets/bcb4013d-683c-4317-8516-240c427e26dd)
-S1107180![image](https://github.com/user-attachments/assets/825285ad-6eed-4485-a6d6-1b5390ee324f)
-S1107180![image](https://github.com/user-attachments/assets/5239a2ce-b92c-40ec-b777-8fef7f630d6d)
-S1107180![image](https://github.com/user-attachments/assets/6250642a-6004-4276-99e0-ff7a4e937937)
-S1107180![image](https://github.com/user-attachments/assets/065cdf2f-0ff7-46cc-b1c7-d1303e92e4a4)
-S1107180![image](https://github.com/user-attachments/assets/ef6f39b2-8ef2-463f-8db2-b6a999db7b94)
+# Wealthwatch : This application will track transaction done by users. It is still in development...
+## Implemented JWT authentication for security to protect endpoints.
+
+## Registration If user is not registered. If registered then can login succesfully.
+<img width="1440" alt="Screenshot 2024-08-04 at 3 02 54 PM" src="https://github.com/user-attachments/assets/d19f71ae-c190-423a-a77d-e56176f4d343">
+<img width="1440" alt="Screenshot 2024-08-04 at 3 09 41 PM" src="https://github.com/user-attachments/assets/036a0f49-d3f3-44c4-a1a6-d5c6f6c40d9d">
+<img width="1440" alt="Screenshot 2024-08-04 at 3 04 54 PM" src="https://github.com/user-attachments/assets/c598c888-e4c3-47d1-89ab-8c882cb9913d">
+
+## After login user can do transactions
+<img width="1440" alt="Screenshot 2024-08-04 at 3 04 54 PM" src="https://github.com/user-attachments/assets/6c365b67-fc22-49ca-8922-4d0455db5f88">
+<img width="1440" alt="Screenshot 2024-08-04 at 3 06 37 PM" src="https://github.com/user-attachments/assets/4352e674-968e-45bf-9c96-04d1e51b1f34">
+<img width="1440" alt="Screenshot 2024-08-04 at 3 06 56 PM" src="https://github.com/user-attachments/assets/dcfad42a-f0b5-4f13-8869-c35c1d2fcd6c">
+<img width="1440" alt="Screenshot 2024-08-04 at 3 07 03 PM" src="https://github.com/user-attachments/assets/295f104b-7c93-4ed2-a172-e9f471910e76">
+
+
+
+
+
 
 
 
