@@ -25,7 +25,7 @@ public class SecurityFilterConfig {
     public SecurityFilterChain filterChain(HttpSecurity security) throws Exception {
         return security.csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.disable())
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/loginUser","/api/auth/registerUser","/api/users/*","/api/expenseIncome/requestBalance/*").permitAll()
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/loginUser","/api/auth/registerUser","/api/**").permitAll()
                         .anyRequest().authenticated())
                 .exceptionHandling(ex -> ex.authenticationEntryPoint(point))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

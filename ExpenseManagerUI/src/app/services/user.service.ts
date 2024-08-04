@@ -26,7 +26,7 @@ export class UserService {
     return this.httpClient.get(this.APPLICATION_URL+"/api/users/"+userName,{headers:this.requestHeaders});
   }
   public getUserBalance(userId:number){
-    return this.httpClient.get(this.APPLICATION_URL+"/api/expenseIncome/requestBalance/"+userId,{headers:this.requestHeaders})
+    return this.httpClient.get(this.APPLICATION_URL+"/api/getTransaction/"+userId,{headers:this.requestHeaders})
   }
   public IsValid(data:any){
      let Isvalid=true;

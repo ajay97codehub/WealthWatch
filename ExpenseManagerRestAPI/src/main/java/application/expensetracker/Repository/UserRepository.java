@@ -1,6 +1,5 @@
 package application.expensetracker.Repository;
 
-import application.expensetracker.Model.ExpenseIncome;
 import application.expensetracker.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
